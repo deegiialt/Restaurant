@@ -1,0 +1,140 @@
+html {
+	font-family: "Quicksand";
+}
+
+body {
+	background-image: url("http://www.powerpointhintergrund.com/uploads/food-background-2.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+label {
+	font-weight: 400;
+}
+
+h1 {
+	margin: 0;
+}
+
+#alert {
+    background-color: #1a6327;
+    color: white;
+}
+
+#first-name-input {
+	border: solid;
+	border-color: black;
+	border-width: 1px;
+	box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.3);
+}
+#last-name-input {
+	border: solid;
+	border-color: black;
+	border-width: 1px;
+	box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.3);
+}
+#email-input {
+	border: solid;
+	border-color: black;
+	border-width: 1px;
+	box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.3);
+}
+#phone-number-input {
+	border: solid;
+	border-color: black;
+	border-width: 1px;
+	box-shadow: inset 0px 0px 10px 4px rgba(0,0,0,0.3);
+}
+
+#reservation-list {
+	box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.3);
+}
+
+#waiting-list {
+	box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.3);
+}
+
+.all {
+	text-align: center;
+}
+
+.welcome {
+    height: 100px;
+    margin-top: 120px;
+    margin-right: 90px;
+}
+
+.title-container {
+	margin-top: 16%;
+    max-width: 50%;
+    float: right;
+    margin-right: 5%;
+    color: white;
+    font-size: 20px;
+    padding: 2%;
+    background-color: rgba(27, 21, 7, 0.6);
+    border-radius: 5px;
+    border: solid;
+    border-color: rgba(27, 21, 7, 1.0);
+   	-moz-box-shadow: 0 5px 24px 2px rgba(0, 0, 0, 0.60), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 5px 24px 2px rgba(0, 0, 0, 0.60), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 24px 2px rgba(0, 0, 0, 0.60), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.reservation-container {
+	margin-top: 2%;
+    max-width: 50%;
+    float: right;
+    margin-right: 5%;
+    color: white;
+    font-size: 20px;
+    padding: 2%;
+    background-color: rgba(27, 21, 7, 0.6);
+    border-radius: 5px;
+    border: solid;
+    border-color: rgba(27, 21, 7, 1.0);
+    -moz-box-shadow: 0 5px 24px 2px rgba(0, 0, 0, 0.60), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 5px 24px 2px rgba(0, 0, 0, 0.60), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 24px 2px rgba(0, 0, 0, 0.60), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.table-container {
+	margin-top: 2%;
+    max-width: 50%;
+    float: right;
+    margin-right: 5%;
+    color: black;
+    font-size: 20px;
+    padding: 2%;
+    background-color: rgba(27, 21, 7, 0.6);
+    border-radius: 5px;
+    border: solid;
+    border-color: rgba(27, 21, 7, 1.0);
+   	-moz-box-shadow: 0 5px 24px 2px rgba(0, 0, 0, 0.60), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 5px 24px 2px rgba(0, 0, 0, 0.60), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 24px 2px rgba(0, 0, 0, 0.60), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.home-container {
+	margin-top: 2%;
+    max-width: 50%;
+    float: right;
+    margin-right: 5%;
+    color: white;
+    font-size: 20px;
+    padding: 2%;
+    background-color: rgba(27, 21, 7, 0.6);
+    border-radius: 5px;
+    border: solid;
+    border-color: rgba(27, 21, 7, 1.0);
+   	-moz-box-shadow: 0 5px 24px 2px rgba(0, 0, 0, 0.60), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 5px 24px 2px rgba(0, 0, 0, 0.60), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 24px 2px rgba(0, 0, 0, 0.60), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+	font-size: 20px;
+	color: white;
+}

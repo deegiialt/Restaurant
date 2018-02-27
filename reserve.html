@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
+<body>
+
+<div class="container title-container">
+	<div class="text-box">
+		<h1 id="restaurant-text">The Pringle Experience</h1>
+	</div>
+</div>	
+
+<div class="container reservation-container">
+	<form>
+	 <div class="form-group">
+	   <label for="first-name-input">Name</label>
+	   <input type="text" class="form-control" id="first-name-input" placeholder="">
+	 </div>
+	<div class="form-group">
+	   <label for="email-input">Email Address</label>
+	   <input type="email" class="form-control" id="email-input" placeholder="">
+	 </div>
+	 <div class="form-group">
+	   <label for="phone-number">Phone Number</label>
+	   <input type="tel" class="form-control" id="phone-number-input" placeholder="(XXX) XXX-XXXX">
+	 </div>
+	 <div class="checkbox">
+	   <label>
+	     <input type="checkbox"> Special Occasion?
+	   </label>
+	 </div>
+	 <div class="button-container">
+	 <button type="submit" class="btn btn-default" id="submit-button">Submit</button>
+
+	 <a href="/"><button type="button" class="btn btn-default btn-md">
+  		<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+	</button></a>
+	 <a href="/tables"><button type="button" class="btn btn-default" id="tables-button">View Tables</button></a>
+		<br>
+		<br>
+	<div class="alert alert-warning alert-dismissible" id="alert" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Your reservation has been saved!</strong></div>
+
+	</div>
+	</form>	
+</div>
+<script>
+	$("#alert").hide();
+	$("#submit-button").on("click", function(event) {
+		event.preventDefault();
+		// alert("Your reservation has been saved!");
+		$("#alert").show();
+		var newReservation = {
+			name: $("#first-name-input").val().trim(),
+	    	email: $("#email-input").val().trim(),
+	    	phoneNumber: $("#phone-number-input").val().trim(),
+	    	uniqueID: $("#first-name-input").val().trim()
+		};
+		$.post("/api/new", newReservation)
+	     .then(function(data) {
+	       console.log(data);
+	     });
+
+		$("#first-name-input").val("");
+		$("#email-input").val("");
+		$("#phone-number-input").val("");
+		$("#first-name-input").val("");
+    });
+
+	$(".close").on("click", function(event) {
+		$("#alert").hide();
+	})
+
+
+</script>
+	
+</body>
+</html>

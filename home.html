@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hottest Restaurant</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	
+	<div class="container title-container">
+		<div class="text-box">
+			<h1 id="restaurant-text">The Pringle Experience</h1>
+		</div>
+	</div>
+	<div class="container home-container">		
+		<section class="button-section">
+			<p uk-margin>
+   				<a href="/tables"><button id="button1" type="submit" class="btn btn-default">View Tables</button></a>
+  				<a href="/reserve"><button id="button2" type="submit" class="btn btn-default">Make A Reservation</button></a>
+			</p>
+		</section>
+
+		<section class="footer">
+			<a href="/api/all">API Table Link</a> | <a href="/api/waitlistobj">API Wait List</a>
+		</section>
+	</div>
+	<script>
+		$.get("/api/tables", function(data) {
+			res.json(data);
+		});
+
+		$.get("/api/waitlist", function(data) {
+			res.json(data);
+		})
+	</script>
+</body>
+</html>

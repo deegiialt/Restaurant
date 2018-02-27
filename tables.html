@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Table</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
+<body>
+
+<div class="container title-container">
+  <div class="text-box">
+    <h1 id="restaurant-text">The Pringle Experience</h1>
+  </div>
+</div>
+
+<div class="container table-container">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+	  <h3 class="panel-title">Current Reservations</h3>
+	  </div>
+	  <div class="panel-body" id="reservation-list">
+			<!-- appended here -->
+	  </div>
+	</div>
+
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">Waiting List</h3>
+	  </div>
+	  <div class="panel-body" id="waiting-list">
+			<!-- appended here -->
+	  </div>
+	</div>
+  <div class="button-container">
+   <a href="/"><button type="button" class="btn btn-default btn-md">
+      <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+   </button></a>
+   <a href="/reserve"><button type="submit" class="btn btn-default" id="tables-button">Make A Reservation</button></a>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+
+     $.get("/api/tables", function(data) { // RESERVED TABLES
+       console.log(data);
+       if (data) {
+          $("#reservation-list").empty();
+       		for (var i = 0; i < data.length; i++) {
+         		var reservations = $("<div class='well wellEdit'>" + data[i] + "</div>");
+         		$("#reservation-list").append(reservations);
+       	}
+       }
+       else {
+         $("#reservation-list").text("No Current Reservations Found.");
+       }
+     });
+
+     $.get("/api/waitlist", function(data) { // RESERVED TABLES
+      $("#waiting-list").empty();
+       console.log(data);
+       if (data) {
+       		for (var i = 0; i < data.length; i++) {
+         		var waitingPeople = $("<div class='well wellEdit'>" + data[i] + "</div>");
+         		$("#waiting-list").append(waitingPeople);
+       	}
+       }
+       else {
+         $("#waiting-list").text("The Wait-list is Empty.");
+       }
+     });
+	
+
+</script>
+
+	
+</body>
+</html>
