@@ -3,7 +3,7 @@ html {
 }
 
 body {
-	background-image: url("http://www.powerpointhintergrund.com/uploads/food-background-2.jpg");
+	background-image: url("../images/foodBackground.jpg");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
